@@ -1,0 +1,191 @@
+body, html {
+    height: 100%;
+}
+
+p {
+    color: #ffffff;
+    font-size: 1.3em;
+    text-align: center;
+    text-shadow: 0 0 .1em #000000;
+}
+p a:link, p a:visited {
+    color: #ccccff;
+    text-decoration: underline;
+}
+p a:hover, p.a:active {
+    color: #ffff00;
+    text-decoration: underline;
+}
+
+a {
+    display: inline;
+}
+
+li {
+    margin-bottom: .8em;
+    list-style-type: upper-roman;
+}
+
+.bg {
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 1em;
+}
+
+.bg1 {
+    background-image: url("../images/golden-sunset.jpg");
+}
+
+.bg2 {
+    background-image: url("../images/mountains.jpg");
+}
+
+.bg5 {
+    background-image: url("../images/mountain-river.jpg");
+}
+
+.bg6 {
+    background-image: url("../images/silver-sunrise.jpg");
+}
+
+h1.white {
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 0 .2em #000000;
+}
+
+h1.black {
+    color: #000000;
+    text-align: center;
+    text-shadow: 0 0 .2em #ffffff;
+}
+
+div.card {
+    box-shadow: 0 .4em .8em 0 rgba(0, 0, 0, 0.2), 0 .6em 2em 0 rgba(0, 0, 0, 0.19);
+    margin: 2em auto;
+    padding: .5em;
+    text-align: justify;
+    max-width: 25em;
+}
+
+div.card h1 {
+    background-color: #eeffee;
+    border-bottom: 1px solid #000000;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0;
+    padding: .2em;
+    text-align: center;
+}
+
+div.card p {
+    color: #000000;
+    display: block;
+    font-size: 1em;
+    font-weight: normal;
+    margin: .5em 0;
+    padding: 0;
+    text-align: justify;
+    text-shadow: none;
+    white-space: normal;
+}
+
+div.card span {
+    display: inline;
+}
+
+div.card p a {
+    color: #0000ff;
+}
+
+div.credits {
+    bottom: 4em;
+    box-shadow: 0 .4em .8em 0 rgba(0, 0, 0, 0.2), 0 .6em 2em 0 rgba(0, 0, 0, 0.19);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+}
+
+a.email {
+    display: inline;
+}
+
+.footer {
+    bottom: 0;
+    position: absolute;
+    height: 4em; /* Height of the footer */
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+    white-space: normal;
+}
+
+.underline {
+    text-decoration: underline;
+    white-space: normal;
+}
+
+.italic {
+    font-style: italic;
+    white-space: normal;
+}
+
+a.nextpage {
+    background-color: #000099;
+    box-shadow: 0 .4em .8em 0 rgba(0, 0, 0, 0.2), 0 .6em 2em 0 rgba(0, 0, 0, 0.19);
+    color: #ffffff;
+    display: block;
+    margin: .5em auto;
+    padding: .2em 0;
+    text-align: center;
+    width: 12em;
+}
+
+a.footernextpage {
+    bottom: 0;
+    background-color: #000099;
+    box-shadow: 0 .4em .8em 0 rgba(0, 0, 0, 0.2), 0 .6em 2em 0 rgba(0, 0, 0, 0.19);
+    color: #ffffff;
+    display: block;
+    margin: .5em auto;
+    padding: .2em 0;
+    position: absolute;
+    text-align: center;
+    width: 12em;
+}
+
+div.VideoContainer {
+    text-align: center;
+}
+
+div.VideoContainer p {
+    color: #000000;
+    font-size: 1em;
+    text-align: center;
+    text-shadow: none;
+}
+
+div.VideoContainer p.InAction {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+div.VideoContainer span.InAction {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+div.VideoContainer iframe {
+    margin-left: auto;
+    margin-right: auto;
+}
