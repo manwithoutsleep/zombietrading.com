@@ -23,7 +23,7 @@ jobs:
 
       # 2. Deploys files using rsync for efficiency
       - name: Deploy with rsync
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
