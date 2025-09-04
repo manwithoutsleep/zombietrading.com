@@ -30,5 +30,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           source: "./"  # Source is the root of your GitHub repo on the runner
-          target: "public_html/" # Target is the destination folder on your server
+          target: "public_html/zombietrading.com/" # Target is the destination folder on your server
           rsync_options: "-avz --delete --exclude='.git*'" # Add rsync flags here
