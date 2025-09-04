@@ -29,10 +29,6 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          script: |
-            # rsync from the current directory to the server's public_html
-            # -a: archive mode, -v: verbose, -z: compress, --delete: remove old files
-            rsync -avz --delete ./ /public_html/zombietrading.com
-            
-            # You can also run commands on the server after deploying
-            # echo "Deployment complete!"
+          source: "./"  # Source is the root of your GitHub repo on the runner
+          target: "public_html/" # Target is the destination folder on your server
+          rsync_options: "-avz --delete --exclude='.git*'" # Add rsync flags here
