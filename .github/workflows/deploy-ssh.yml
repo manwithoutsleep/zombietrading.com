@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checks out your repository's code
+      # Check out your repository's code
       - name: Checkout Repository
         uses: actions/checkout@v4
       
@@ -21,14 +21,15 @@ jobs:
           # npm install
           # npm build
 
-      # 2. Deploys files using rsync for efficiency
-      - name: Deploy with rsync
-        uses: appleboy/ssh-action@master
+      # Deploy files using scp-action
+      - name: Sync files to server
+        uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          source: "./"  # Source is the root of your GitHub repo on the runner
-          target: "public_html/zombietrading.com/" # Target is the destination folder on your server
-          rsync_options: "-avz --delete --exclude='.git*'" # Add rsync flags here
+          source: "./"
+          target: "public_html/zombietrading.com/"
+          exclude: .git*
+          rm: true
