@@ -21,15 +21,14 @@ jobs:
           # npm install
           # npm build
 
-      # Deploy files using scp-action
+      # Deploy files to server
       - name: Sync files to server
-        uses: appleboy/scp-action@master
+        uses: contention/rsync-deployments@v2.0.0
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22
-          source: "./"
-          target: "public_html/zombietrading.com/"
-          exclude: .git*
-          rm: true
+          HOST: ${{ secrets.SSH_HOST }}
+          USER: ${{ secrets.SSH_USER }}
+          DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          LOCALPATH: /
+          REMOTEPATH: public_html/zombietrading.com/
+          FLAGS: -avzr --delete
+          EXCLUDES: --exclude .htaccess --exclude /uploads/
