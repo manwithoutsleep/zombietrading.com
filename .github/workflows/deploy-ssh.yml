@@ -32,7 +32,8 @@ jobs:
           script: |
             # rsync from the current directory to the server's public_html
             # -a: archive mode, -v: verbose, -z: compress, --delete: remove old files
-            rsync -avz --delete ./ /public_html/zombietrading.com
+            rsync -avz --delete ./ public_html/zombietrading.com
             
             # You can also run commands on the server after deploying
+
             # echo "Deployment complete!"
