@@ -31,4 +31,4 @@ jobs:
           LOCALPATH: /
           REMOTEPATH: public_html/zombietrading.com/
           FLAGS: -avzr --delete
-          EXCLUDES: --exclude .htaccess --exclude /uploads/
+          EXCLUDES: --exclude .htaccess --exclude .git*
